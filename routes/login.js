@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/react');
+const cookieParser = require('cookie-parser');
 const User = require("../schema/user");
 const Token = require("../services/token");
 const bcrypt = require('bcrypt');

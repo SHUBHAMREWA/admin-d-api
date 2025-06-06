@@ -1,9 +1,8 @@
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/react');
 const User = require("../schema/user");
 const Verification = require("../schema/verification");
 const { sendMail } = require("../services/email");
 const bcrypt = require('bcrypt');
+const Token = require("../services/token");
 
 const checkUser = async (request,response)=>{
   let verif = code();
